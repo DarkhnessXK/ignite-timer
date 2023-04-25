@@ -28,7 +28,7 @@ interface CyclesContextType {
 export const CyclesContext = createContext({} as CyclesContextType)
 
 interface CyclesContextProviderProps {
-  Children: ReactNode
+  children: ReactNode
 }
 
 export function CyclesContextProvider({

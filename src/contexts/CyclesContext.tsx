@@ -1,4 +1,4 @@
-import { Children, ReactNode, createContext, useState } from 'react'
+import { ReactNode, createContext, useState } from 'react'
 
 interface CreateNewCycleData {
   task: string
@@ -32,8 +32,8 @@ interface CyclesContextProviderProps {
 }
 
 export function CyclesContextProvider({
-  children: CyclesContextProviderProps,
-}) {
+  children,
+}: CyclesContextProviderProps) {
   const [cycles, setCycles] = useState<Cycle[]>([])
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null)
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0)
